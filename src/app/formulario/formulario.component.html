@@ -1,0 +1,18 @@
+<section class="container-fluid">
+  <div class="full-screen-container">
+    <div class="container">
+      <h1 class="login-title"><i>Bem-vindo</i></h1>
+      <form (ngSubmit)="enviar()">
+        <div class="input-group">
+          <label>Email</label>
+          <input type="text" required placeholder="xxxxx@gmail.com" [(ngModel)]="email" name="email"/>
+        </div>
+        <div class="input-group">
+          <label>Telefone</label>
+          <input type="text" required placeholder="(xx) xxxxx-xxxx" [(ngModel)]="telefone" name="telefone"/>
+        </div>
+        <button type="submit" class="login-btn">Enviar</button>
+      </form>
+    </div>
+  </div>
+</section>
