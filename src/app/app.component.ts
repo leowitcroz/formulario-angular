@@ -8,9 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'formulario';
 
-  
+  enviando: any;
 
-  enviar($event: any){
+  enviar($event: any): void{
     console.log($event);
+    this.enviando = $event;
+    
   }
 }
