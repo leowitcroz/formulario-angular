@@ -15,13 +15,23 @@ export class FormularioComponent implements OnInit {
   @Output() aoEnviar = new EventEmitter<any>()
 
   email: string | undefined;
-  telefone: string | undefined;
+  telefone: number | undefined;
 
 
   enviar(){
     console.log('nova transferencia solicitada');
     const valorEnviar = {email:this.email, telefone: this.telefone};
     this.aoEnviar.emit(valorEnviar);
+
+    this.limparCampos;
+  }
+
+  limparCampos(){
+
+    this.email = "";
+    this.telefone = 0;
+
+
   }
 
 
