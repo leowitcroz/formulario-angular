@@ -5,7 +5,7 @@
         <th class="conteudo">Email</th>
         <th class="conteudo">Telefone</th>
     </thead>
-    <tbody>
+    <tbody *ngIf="!!enviandos?.length; else listaVazia">
         <tr clas="tabela__linha" *ngFor="let enviando of enviandos">
             <td class="tabela__conteudo">{{enviando.data | date:'short'}}</td>
             <td class="tabela__conteudo">{{ enviando.email}}</td>
@@ -13,6 +13,10 @@
         </tr>
     </tbody>
 </table>
+<ng-template #listaVazia>
+
+    <p>Nenhum dado cadastrado</p>
+</ng-template>
 </section>
 
 
