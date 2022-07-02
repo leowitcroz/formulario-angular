@@ -15,7 +15,7 @@ export class FormularioComponent implements OnInit {
   @Output() aoEnviar = new EventEmitter<any>()
 
   email: string | undefined;
-  telefone: number | undefined;
+  telefone: any | undefined;
 
 
   enviar(){
@@ -23,13 +23,13 @@ export class FormularioComponent implements OnInit {
     const valorEnviar = {email:this.email, telefone: this.telefone};
     this.aoEnviar.emit(valorEnviar);
 
-    this.limparCampos;
+    this.limparCampos();
   }
 
   limparCampos(){
 
     this.email = "";
-    this.telefone = 0;
+    this.telefone = "";
 
 
   }

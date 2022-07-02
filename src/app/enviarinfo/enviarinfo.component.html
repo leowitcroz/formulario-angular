@@ -1,2 +1,19 @@
-<p>Email: {{ enviando.email}}</p>
-<p>telefone: {{ enviando.telefone}}</p>
+<section class="tudo">
+<table class="tabela">
+    <thead class="tabela__cabecalho">
+        <th class="conteudo">Data</th>
+        <th class="conteudo">Email</th>
+        <th class="conteudo">Telefone</th>
+    </thead>
+    <tbody>
+        <tr clas="tabela__linha" *ngFor="let enviando of enviandos">
+            <td class="tabela__conteudo">{{enviando.data | date:'short'}}</td>
+            <td class="tabela__conteudo">{{ enviando.email}}</td>
+            <td class="tabela__conteudo"> {{ enviando.telefone}}</td>
+        </tr>
+    </tbody>
+</table>
+</section>
+
+
+
