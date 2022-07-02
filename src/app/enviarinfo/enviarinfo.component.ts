@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class EnviarinfoComponent implements OnInit {
 
 
-  @Input() enviando : any;
+  @Input() enviandos : any[] = [];
 
   constructor() { }
 

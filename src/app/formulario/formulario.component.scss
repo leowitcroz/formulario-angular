@@ -6,7 +6,7 @@
   }
   .full-screen-container{
     background-color: rgb(73, 73, 73);
-    height:100vh;
+    height:70vh;
     width:100%;
     background-size: cover;
     background-position:center;
@@ -21,6 +21,7 @@
     max-width: 600px;
     min-width:400px;
     margin-bottom: 15%;
+    margin-top: 10%;
   }
   .login-title{
     color:#1877f2;
@@ -73,4 +74,5 @@
     opacity:.8;
   }
   
+ 
   
