@@ -8,13 +8,15 @@ import { EnviarinfoComponent } from './enviarinfo/enviarinfo.component';
 import { registerLocaleData } from '@angular/common';
 import localPt from '@angular/common/locales/pt';
 
+
 registerLocaleData(localPt, 'pt');
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularioComponent,
-    EnviarinfoComponent
+    EnviarinfoComponent,
+    
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EnviandoService } from './services/enviando.service';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +9,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'formulario';
 
-  enviandos: any[] = [];
+  
 
-  enviar($event: any): void{
-    console.log($event);
-    const enviando = {...$event, data: new Date()};
-    this.enviandos.push(enviando);
-    
+  constructor(private service: EnviandoService){
+
   }
+
+  enviar($event: any){
+    this.service.adicionar($event)
+
+  }
+
+  
 }
